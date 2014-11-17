@@ -1,9 +1,0 @@
-[template]
-src = "/docker-registry/config/registry-config.tmpl"
-dest = "/docker-registry/config/registry-config.yml"
-keys = [
-    "/azure/storage/lolalyzermanage/accountkey",
-    "/registry/containername",
-    "/registry/accountname",
-    "/registry/usehttps"
-]
