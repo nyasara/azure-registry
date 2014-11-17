@@ -1,0 +1,8 @@
+[template]
+src = "config.tmpl"
+dest = "/docker-registry/config/registry-config.yml"
+keys = [
+    "/registry/account",
+    "/registry/container",
+    "/registry/accountkey",
+]
