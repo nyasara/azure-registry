@@ -22,7 +22,8 @@ $(python -c 'import boto; import os; print os.path.dirname(boto.__file__)')/conn
 VOLUME /docker-registry/config
 VOLUME /var/log/registry
 
-COPY registry.toml /etc/confd/conf.d/
+COPY registry-config.toml /etc/confd/conf.d/
+COPY run-registry.sh /docker-registry/run-registry.sh
 
 # Environment variables to run registry
 ENV DOCKER_REGISTRY_CONFIG /docker-registry/config/registry-config.yml
@@ -30,4 +31,4 @@ ENV SETTINGS_FLAVOR prod
 
 EXPOSE 5000
 
-CMD ["docker-registry"]
+CMD ["/docker-registry/run-registry.sh"]
