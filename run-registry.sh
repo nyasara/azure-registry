@@ -19,3 +19,4 @@ do
     fi
     CONFIG_FILE="$NEW_FILE"
     sleep 60
+done
