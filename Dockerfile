@@ -26,6 +26,8 @@ VOLUME /var/log/registry
 COPY registry-config.toml /etc/confd/conf.d/
 COPY run-registry.sh /docker-registry/run-registry.sh
 
+RUN chmod +x /docker-registry/run-registry.sh
+
 # Environment variables to run registry
 ENV DOCKER_REGISTRY_CONFIG /docker-registry/config/registry-config.yml
 ENV SETTINGS_FLAVOR prod
