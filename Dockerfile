@@ -34,4 +34,4 @@ ENV SETTINGS_FLAVOR prod
 
 EXPOSE 5000
 
-CMD ["/docker-registry/run-registry.sh"]
+CMD ["/bin/bash", "/docker-registry/run-registry.sh"]
